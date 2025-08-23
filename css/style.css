@@ -1,0 +1,368 @@
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter18pt-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter18pt-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter18pt-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter18pt-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--color-black-blue: #1e293b;
+	--color-text-card-btn-blue: #3b82f6;
+	--color-input-text-grey: #64748b;
+	--color-solid: #e2e8f0;
+	--color-light: #ffffff;
+	--color-black: #000000;
+
+	--container-width: 1300px;
+	--container-padding-x: 15px;
+
+	--transition: transform 0.2s ease;
+
+	--focus-visible: 2px solid var(--color-text-card-btn-blue);
+	
+}
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: var(--color-light);
+	text-decoration: none;
+}
+
+button {
+	font-weight: 500;
+	font-size: 14px;
+	color: var(--color-light);
+	border-radius: 4px;
+	border: none;
+	box-shadow: none;
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.99);
+    opacity: 0.8;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background: var(--color-light);
+}
+
+.container {
+	width: 100%;
+	max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x);
+}
+
+/* Header */
+
+/* Первый блок Header Top */
+
+.header {
+	border-bottom: 1px solid var(--color-solid);
+}
+
+.header__top {
+	background: var(--color-black-blue);
+	margin-bottom: 16px;
+}
+
+.header__top-interactive {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	height: 52px;
+}
+
+.header__top-button-login {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	line-height: 1;
+	margin-right: 24px;
+	background-color: transparent;
+	height: 32px;
+}
+
+.header__top-button-login:focus-visible {
+    outline: var(--focus-visible);
+}
+
+.header__top-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	line-height: 1;
+	background: var(--color-text-card-btn-blue);
+	min-width: 180px;
+	padding: 0 16px;
+	height: 32px;
+}
+
+.header__top-button:focus-visible {
+    outline: var(--focus-visible);
+}
+
+.header__top-button img {
+	position: static;
+}
+
+.header__top-button:focus,
+.header__top-button-login:focus {
+	outline: 2px solid var(--color-text-card-btn-blue);
+	outline-offset: 2px;
+}
+
+/* Второй блок Header bottom */
+
+.header__bottom-interactive {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.header__bottom-title {
+	font-weight: 700;
+	margin: 24px 12px 24px 0;
+	font-size: clamp(24px, 2.3vw, 30px);
+	line-height: 1;
+	color: var(--color-black-blue);
+}
+
+.header__bottom-button {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	gap: 8px;
+	line-height: 1;
+	border: 1px solid var(--color-text-card-btn-blue);
+	background: transparent;
+	color: var(--color-text-card-btn-blue);
+	border-radius: 4px;
+	min-width: 140px;
+	height: 36px;
+	transition: var(--transition);
+}
+
+.header__bottom-button:hover {
+	opacity: 0.8;
+}
+
+.header__bottom-button:active {
+	opacity: 0.7;
+}
+
+.header__bottom-button:focus-visible {
+    outline: var(--focus-visible);
+}
+
+.header__bottom-input {
+	display: flex;
+	flex: 1;
+	min-width: 0;
+}
+
+.header__bottom-input-stroke {
+	flex: 1;
+	min-width: 0;
+	border: 1px solid #cbd5e1;
+	border-radius: 4px 0 0 4px;
+	height: 36px;
+	padding-left: 12px;
+}
+
+.header__bottom-input-stroke::placeholder {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1;
+	color: var(--color-input-text-grey);
+}
+
+.header__bottom-input-stroke:focus-visible {
+    outline: var(--focus-visible);
+}
+
+.header__bottom-input-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	line-height: 1;
+	background: var(--color-text-card-btn-blue);
+	border-radius: 0 4px 4px 0;
+	min-width: 90px;
+	padding: 0 12px;
+	height: 36px;
+}
+
+.header__bottom-input-button:focus-visible {
+    outline: var(--focus-visible);
+}
+
+/* Секция 1 */
+
+.main__recommendation {
+	margin-bottom: 80px;
+}
+
+.main__recommendation-card {
+	display: grid;
+  	grid-template-columns: repeat(auto-fill, 300px);
+  	gap: 18px;
+  	justify-content: center;
+}
+
+.main__recommendation-card-block {
+	width: 300px;
+}
+
+.main__recommendation-card-image {
+	border-radius: 4px;
+	transition: var(--transition);
+}
+
+.main__recommendation-card-image:hover {
+    transform: scale(1.01);
+}
+
+.main__recommendation-card-image:active {
+    transform: scale(0.99);
+    opacity: 0.9;
+}
+
+.main__recommendation-card-title {
+	margin: 8px 0 6px 0;
+}
+
+.main__recommendation-card-title a {
+	display: block;
+	color: var(--color-text-card-btn-blue);
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1;
+	transition: var(--transition);
+}
+
+.main__recommendation-card-title a:hover {
+	color: #cb365e;
+}
+
+.main__recommendation-card-title a:active {
+    transform: scale(0.99);
+    opacity: 0.9;
+}
+
+.main__recommendation-card-title a:focus-visible {
+    outline: var(--focus-visible);
+}
+
+.main__recommendation-card-price {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1;
+	margin: 0 0 6px 0;
+	color: var(--color-black-blue);
+}
+
+.main__recommendation-card-adres,
+.main__recommendation-card-time {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1;
+	color: var(--color-input-text-grey);
+	margin: 0;
+}
+
+
+
+/* Адаптив */
+
+@media (max-width: 768px) {
+	.header {
+	}
+	.header__bottom-interactive {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.header__bottom-button {
+		width: 100%;
+	}
+}
+
+
+/* Отключение Hover на сенсорных устройствах */
+
+@media (hover:none) {
+    button:hover {
+        transform: none;
+    }
+
+    button:active {
+        transform: scale(0.99);
+    } 
+
+	.main__recommendation-card-image:hover {
+		transform: none;
+	}
+
+	.main__recommendation-card-image:active {
+		transform: scale(0.99);
+	}
+
+	.main__recommendation-card-title a:hover {
+		transform: none;
+	}
+
+	.main__recommendation-card-title a:active {
+    	transform: scale(0.99);
+	}
+}
