@@ -1,0 +1,154 @@
+@use '../variables' as v;
+
+/* Header */
+
+/* Первый блок Header Top */
+
+.header {
+  border-bottom: 1px solid v.$color-border-line;
+
+  &__top-menu {
+    background: v.$background-color-header-top;
+    margin-bottom: 16px;
+
+    &-interactive {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      height: 52px;
+    }
+
+    &-button-login {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      line-height: 1;
+      margin-right: 24px;
+      background-color: transparent;
+      height: 32px;
+
+      &:focus-visible {
+        outline: v.$focus-visible;
+      }
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      line-height: 1;
+      background: v.$color-button;
+      min-width: 180px;
+      padding: 0 16px;
+      height: 32px;
+
+      &:focus-visible {
+        outline: v.$focus-visible;
+      }
+
+      svg {
+        position: static;
+      }
+    }
+
+    &-button:focus,
+    &-button-login:focus {
+      outline: 2px solid v.$color-primary;
+      outline-offset: 2px;
+    }
+  }
+}
+
+/* Второй блок Header bottom */
+
+.header__bottom-menu-interactive {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header__bottom-menu-title {
+  font-weight: 700;
+  margin: 24px 12px 24px 0;
+  font-size: clamp(24px, 2.3vw, 30px);
+  line-height: 1;
+  color: v.$color-header-text-title;
+}
+
+.header__bottom-menu-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+  border: 1px solid v.$color-button;
+  background: transparent;
+  color: v.$color-button;
+  border-radius: 4px;
+  min-width: 140px;
+  height: 36px;
+  transition: v.$transition;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: v.$focus-visible;
+  }
+}
+
+.header__bottom-menu-input {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+
+  &-stroke {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px 0 0 4px;
+    height: 36px;
+    padding-left: 12px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1;
+      color: v.$color-placeholder;
+    }
+
+    &:focus-visible {
+      outline-color: v.$color-input-outline;
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    line-height: 1;
+    background: v.$color-button;
+    border-radius: 0 4px 4px 0;
+    min-width: 90px;
+    padding: 0 12px;
+    height: 36px;
+
+      &:focus-visible {
+        outline: v.$focus-visible;
+      }
+  }
+}
+

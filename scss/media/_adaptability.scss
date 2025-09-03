@@ -1,0 +1,11 @@
+/* Адаптив */
+
+@media (max-width: 768px) {
+	.header__bottom-menu-interactive {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.header__bottom-menu-button {
+		width: 100%;
+	}
+}

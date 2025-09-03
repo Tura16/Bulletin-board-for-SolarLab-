@@ -1,0 +1,22 @@
+{
+  "name": "project-bulletin-board",
+  "version": "1.0.0",
+  "description": "bulletin-board for Solarlab",
+  "source": "index.html",
+  "scripts": {
+    "start": "sass --style=expanded --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tura16/Bulletin-board-for-SolarLab-.git"
+  },
+  "author": "Artur Mnatsakanyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tura16/Bulletin-board-for-SolarLab-/issues"
+  },
+  "homepage": "https://github.com/Tura16/Bulletin-board-for-SolarLab-#readme",
+  "dependencies": {
+    "sass": "^1.92.0"
+  }
+}

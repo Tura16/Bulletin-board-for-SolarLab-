@@ -1,0 +1,34 @@
+@use "variables" as v;
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+a {
+	color: v.$color-light;
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background: v.$color-light;
+}
+
+.container {
+	width: 100%;
+	max-width: calc((v.$container-width) + (v.$container-padding-x) * 2);
+	margin-inline: auto;
+	padding-inline: v.$container-padding-x;
+}

@@ -1,0 +1,22 @@
+@use "variables" as v;
+
+button {
+	font-weight: 500;
+	font-size: 14px;
+	color: v.$color-light;
+	border-radius: 4px;
+	border: none;
+	box-shadow: none;
+	transition: v.$transition;
+	cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.99);
+    opacity: 0.8;
+  }
+}

@@ -1,16 +1,3 @@
-/* Адаптив */
-
-@media (max-width: 768px) {
-	.header__bottom-menu-interactive {
-		flex-direction: column;
-		align-items: stretch;
-	}
-	.header__bottom-menu-button {
-		width: 100%;
-	}
-}
-
-
 /* Отключение Hover на сенсорных устройствах */
 
 @media (hover:none) {
@@ -19,7 +6,7 @@
     }
 
     button:active {
-        transform: scale(0.99);
+        transform: scale(0.98);
     } 
 
 	.main__recommendation-card-image:hover {
