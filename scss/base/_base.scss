@@ -21,6 +21,10 @@ a {
 	text-decoration: none;
 }
 
+input {
+	caret-color: v.$color-header-text-title;
+}
+
 body {
 	font-family: 'Inter', sans-serif;
 	background: v.$color-light;
